@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strona</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        #main {
+            background-image: url('bdg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px 100px 0px 100px;
+            background-color: transparent;
+            color: rgb(66, 66, 66);
+            margin-bottom: -40px;
+        }
+
+        .navbar a {
+            color: rgb(66, 66, 66);
+            text-decoration: none;
+            margin-left: 20px;
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-right: 25px;
+            letter-spacing: 1px;
+        }
+
+        .navbar a:hover {
+            color: #6acac2;
+        }
+
+        .content {
+            display: flex;
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .left,
+        .right {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .right {
+            text-align: left;
+            padding-left: 20%;
+            padding-right: 10%;
+        }
+
+        .right p {
+            font-size: 24px;
+            color: rgb(102, 102, 102);
+            line-height: 1.7em;
+        }
+
+        .right h1 {
+            font-size: 50px;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 25px 55px;
+            background-color: #6acac2;
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+
+        #about {
+            height: 500px;
+            text-align: center;
+            padding: 120px 510px;
+            padding-bottom: 50px;
+        }
+
+        #about p {
+            font-size: 22px;
+            color: rgb(102, 102, 102);
+            line-height: 1.6em;
+        }
+
+        #about h1 {
+            font-size: 40px;
+        }
+
+        #about img {
+            width: 250px;
+        }
+
+        #skill {
+            margin: 0;
+            padding: 0;
+        }
+
+        #s1,
+        #s2 {
+            width: 50%;
+            float: left;
+            margin: 0;
+            height: 750px;
+        }
+
+        #s1 {
+            background-color: #fafafa;
+
+        }
+
+        #s1 h1 {
+            font-size: 40px;
+        }
+
+        .txt {
+            padding-left: 100px;
+            padding-top: 200px;
+        }
+
+        .txt p {
+            font-weight: bold;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            margin-top: 50px;
+        }
+
+        .horizontal-line1 {
+            width: 80%;
+            height: 4px;
+            background: linear-gradient(to right, #6acac2 75%, #dbdbdb 75%);
+        }
+
+        .horizontal-line2 {
+            width: 80%;
+            height: 4px;
+            background: linear-gradient(to right, #6acac2 90%, #dbdbdb 90%);
+        }
+
+        .horizontal-line3 {
+            width: 80%;
+            height: 4px;
+            background: linear-gradient(to right, #6acac2 65%, #dbdbdb 65%);
+        }
+
+        #blue {
+            background-color: #6acac2;
+            margin: 0;
+            padding: 100px;
+            color: #fff;
+            clear: both;
+            height: 110px;
+            letter-spacing: 1px;
+            font-weight: bold;
+            padding-left: 200px;
+        }
+
+        .elem1 {
+            float: left;
+            margin-right: 200px;
+        }
+
+        .elem3 h1 {
+            font-size: 30px;
+        }
+
+        #image-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0; 
+        }
+
+        .image-wrapper {
+            position: relative;
+            margin: 0; 
+            width: 25%;
+        }
+
+        .image-wrapper img {
+            display: block;
+            width: 100%; 
+            height: auto;
+        }
+
+        .image-wrapper::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Ciemnoszary z przezroczystością */
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .image-wrapper:hover::after {
+            opacity: 1;
+        }
+        #load{
+            width: 100%;
+            margin: 0;
+            clear: both;
+            padding: 50px 0;
+            background-color: #dbdbdb;
+            text-align: center;
+            font-weight: bold;
+            color: #8b8b8b;
+            letter-spacing: 1px;
+        }
+        #work{
+            clear: both;
+            width: 100%;
+            height: 600px;
+            padding-top: 100px;
+            text-align: center; 
+        }
+        #work h1{
+            margin-bottom: 50px;
+        }
+        #work p{
+            padding: 0 570px;
+            font-size: 22px;
+            color:#8b8b8b;
+            font-weight: 500;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <div class="navbar">
+            <div class="logo">
+                Logo
+            </div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#image-container">Work</a>
+                <a href="#work">Process</a>
+                <a href="#services">Services</a>
+                <a href="#testimonials">Testimonials</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="left">
+            </div>
+            <div class="right">
+                <h1>We Design and Develop</h1>
+                <p>We are a new design studio based in USA. We have over 20 years of combined experience, and know a
+                    thing or two about designing websites and mobile apps.</p>
+                <a href="#contact" class="button">CONTACT US</a>
+            </div>
+        </div>
+    </div>
+    <div id="about">
+        <h1>About Us</h1>
+        <p>Divide have don't man wherein air fourth. Own itself make have night won't make.<br> A you under Seed appear
+            which good give. Own give air without fowl moveth dry first heaven fruit, dominion she'd won't very all.</p>
+        <img src="sign.jpg" alt="img2">
+    </div>
+    <div id="skill">
+        <div id="s1">
+            <div class="txt">
+                <h1>Professional Skills</h1>
+                <p>
+                    UI/UX DESIGN 75%
+                <div class="horizontal-line1"></div>
+                </p>
+                <p>
+                    WEB DEVELOPMENT 90%
+                <div class="horizontal-line2"></div>
+                </p>
+                <p>
+                    MARKETING 65%
+                <div class="horizontal-line3"></div>
+                </p>
+            </div>
+        </div>
+        <div id="s2">
+            <img src="img2.jpg" height="750px" width="932px" alt="img3">
+        </div>
+    </div>
+    <div id="blue">
+        <div class="elem1">
+            <div class="elem3">
+                <h1>548</h1>
+                <p>PROJECTS COMPLETED</p>
+            </div>
+        </div>
+        <div class="elem1">
+            <div class="elem3">
+                <h1>1465</h1>
+                <p>WORKING HOURS</p>
+            </div>
+        </div>
+        <div class="elem1">
+            <div class="elem3">
+                <h1>612</h1>
+                <p>POSITIVE FEEDBACKS</p>
+            </div>
+        </div>
+        <div class="elem1">
+            <div class="elem3">
+                <h1>735</h1>
+                <p>HAPPY CLIENTS</p>
+            </div>
+        </div>
+    </div>
+    <div id="image-container">
+        <div class="image-wrapper">
+            <img src="jpg1.jpg" alt="Obrazek 1">
+        </div>
+        <div class="image-wrapper">
+            <img src="jpg2.jpg" alt="Obrazek 2">
+        </div>
+        <div class="image-wrapper">
+            <img src="jpg1.jpg" alt="Obrazek 3">
+        </div>
+        <div class="image-wrapper">
+            <img src="jpg2.jpg" alt="Obrazek 4">
+        </div>
+        <div class="image-wrapper">
+            <img src="jpg2.jpg" alt="Obrazek 5">
+        </div>
+        <div class="image-wrapper">
+            <img src="jpg1.jpg" alt="Obrazek 6">
+        </div>
+        <div class="image-wrapper">
+            <img src="jpg2.jpg" alt="Obrazek 7">
+        </div>
+        <div class="image-wrapper">
+            <img src="jpg1.jpg" alt="Obrazek 8">
+        </div>
+    </div>
+    <div id="load">
+        LOAD MORE WORK
+    </div>
+    <div id="work">
+        <h1>Our Work Process</h1>
+        <p>Was years it seasons was there form he in in them together over that, third sixth gathered female creeping bearing behold years.</p>
+    </div>
+</body>
+
+</html>
